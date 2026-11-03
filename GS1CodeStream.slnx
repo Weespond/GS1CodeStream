@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GS1CodeStream.Client/GS1CodeStream.Client.csproj" />
+    <Project Path="src/GS1CodeStream.Server/GS1CodeStream.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/GS1CodeStream.Tests/GS1CodeStream.Tests.csproj" />
+  </Folder>
+</Solution>
