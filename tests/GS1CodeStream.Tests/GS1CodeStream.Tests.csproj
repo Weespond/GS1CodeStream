@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../../src/GS1CodeStream.Server/GS1CodeStream.Server.csproj" />
+    <ProjectReference Include="../../src/GS1CodeStream.Client/GS1CodeStream.Client.csproj" />
   </ItemGroup>
 
 </Project>

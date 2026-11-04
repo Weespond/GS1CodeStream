@@ -2,6 +2,7 @@
 [Bb]in/
 [Oo]bj/
 TestResults/
+codes.txt
 
 # IDE and user settings
 .vs/
