@@ -2,8 +2,14 @@ using GS1CodeStream.Server;
 
 namespace GS1CodeStream.Tests;
 
+/// <summary>
+/// Проверяет формат и контрольную цифру синтетических кодов.
+/// </summary>
 public class MarkingCodeGeneratorTests
 {
+    /// <summary>
+    /// Проверяет контрольные цифры на известных примерах.
+    /// </summary>
     [Theory]
     [InlineData("0000000000000", '0')]
     [InlineData("1234567890123", '1')]
@@ -14,6 +20,9 @@ public class MarkingCodeGeneratorTests
         Assert.Equal(expected, MarkingCodeGenerator.CalculateCheckDigit(digits));
     }
 
+    /// <summary>
+    /// Проверяет формат и контрольные цифры сгенерированных кодов.
+    /// </summary>
     [Fact]
     public void Generate_ReturnsCodesWithValidFormatAndCheckDigit()
     {

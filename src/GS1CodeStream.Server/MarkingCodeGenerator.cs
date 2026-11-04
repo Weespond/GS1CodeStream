@@ -1,10 +1,17 @@
 namespace GS1CodeStream.Server;
 
+/// <summary>
+/// Создаёт синтетические коды с имитацией структуры GS1.
+/// </summary>
 public sealed class MarkingCodeGenerator
 {
     private const string SerialCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private const int SerialLength = 12;
 
+    /// <summary>
+    /// Генерирует код с GTIN-14 и случайным серийным номером.
+    /// </summary>
+    /// <returns>Человекочитаемый синтетический код.</returns>
     public string Generate()
     {
         Span<char> gtin = stackalloc char[14];
@@ -24,6 +31,9 @@ public sealed class MarkingCodeGenerator
         return $"(01){gtin}(21){serial}";
     }
 
+    /// <summary>
+    /// Вычисляет контрольную цифру для цифр GTIN без контрольного разряда.
+    /// </summary>
     internal static char CalculateCheckDigit(ReadOnlySpan<char> digits)
     {
         int sum = 0;
